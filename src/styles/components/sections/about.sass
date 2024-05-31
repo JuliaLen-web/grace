@@ -1,0 +1,22 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.about
+  box-sizing: border-box
+  padding-block: 120px 80px
+  background:  url(../assets/img/global/about-bg.png) no-repeat center/cover
+
+  &__supertitle
+    +font(40px, 52px)
+    color: $neutral-light
+    font-weight: 700
+
+  &__title
+    +font(60px, 78px)
+    font-weight: 700
+    margin-block-end: 20px
+
+  &__subtitle
+    +font(20px, 26px)
+    color: $neutral-light
+    margin-block-end: 40px

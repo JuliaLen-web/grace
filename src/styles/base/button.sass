@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.button
+  border: none
+  outline: none
+  background: $light
+  color: $base
+  box-sizing: border-box
+  padding: 12px 30px
+  +font(18px, 22px)
+  border-radius: 8px
+  display: block
+  width: fit-content
+
+  &--border
+    background: none
+    border: 1px solid $light
+    color: $light
+    transition: background .3s, color .3s
+
+    &:hover
+      background: $light
+      color: $base
+      transition: background .3s, color .3s

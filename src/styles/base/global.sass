@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+html
+  scroll-behavior: smooth
+
+body
+  height: 100%
+  width: 100%
+  font-family: $font-base
+  color: $light
+  background: $base
+
+  &::-webkit-scrollbar
+    width: 8px
+    height: 8px
+    background: $dark
+    +screen($tablet)
+      display: none
+
+    &-thumb
+      background: lighten($base, 10%)
+      border-radius: 4px
+      transition: all .3s
+
+      &:hover
+        background: lighten($base, 15%)
+
+.main
+  position: relative
+  +screen($tablet)
+    overflow: hidden
+
+.container
+  position: relative
+  box-sizing: border-box
+  width: 100%
+  max-width: 1440px
+  margin: 0 auto
+  padding-inline: 20px
+
+.overflow-all
+  overflow: hidden
+
+a
+  text-decoration: none
+  color: $light
+
+img
+  max-width: 100%
+  height: auto
+
+.mobile
+  display: none
+  +screen($tablet)
+    display: block
+
+.separate-line
+  display: block
+  height: 1px
+  width: 100%
+  background: $light

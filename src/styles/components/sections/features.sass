@@ -1,0 +1,83 @@
+@use '../../abstracts/variables' as *
+@use '../../abstracts/mixins' as *
+
+.features
+  background: url(../assets/img/global/noisy-texture.png) repeat center/150px
+  border-radius: 60px
+  box-sizing: border-box
+  padding-block: 60px 80px
+
+  &__header
+    position: relative
+    box-sizing: border-box
+    padding-block: 60px
+    margin-bottom: 60px
+
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      right: 0
+      width: 100%
+      height: 46px
+
+    &::before
+      background: url(../assets/img/svg/top-angles.svg) no-repeat repeat center / 100% 46px
+      top: 0
+
+    &::after
+      background: url(../assets/img/svg/bottom-angles.svg) no-repeat repeat center / 100% 46px
+      bottom: 0
+
+    &-title
+      +font(96px, 110px)
+      font-family: $font-headers
+      text-transform: uppercase
+      letter-spacing: 30px
+      font-weight: 900
+      margin-bottom: 50px
+      +screen($mobile)
+        +font(60px, 96px)
+
+
+    &-title,
+    &-subtitle
+      text-align: center
+
+    &-subtitle
+      +font(22px, 28px)
+      color: $neutral-light
+      font-family: $font-titles
+
+  .separate-line
+    background: $neutral-light
+    margin: 14px auto
+    max-width: 320px
+
+  &__content
+    max-width: 922px
+    margin: 0 auto
+
+  &__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &.reverse
+      flex-direction: row-reverse
+
+    &-img
+      max-width: 27%
+
+    &-content
+      max-width: 65%
+
+    &-title
+      +font(30px, 39px)
+      font-family: $font-titles
+      font-weight: 700
+
+    &-text
+      +font(16px, 28px)

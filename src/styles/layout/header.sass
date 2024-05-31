@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.header
+  background-color: $neutral-dark
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  right: 0
+  box-sizing: border-box
+  padding-block: 16px
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .navigation
+      +screen($tablet)
+        display: none
+
+      &__item
+        position: relative
+        cursor: pointer
+
+        &:not(:last-child)
+          margin-inline-end: 60px
+
+        &-title
+          position: relative
+          z-index: 2
+          +font(20px, 26px)
+          box-sizing: border-box
+          padding: 9px 20px
+
+        &-list
+          position: absolute
+          z-index: 1
+          top: 0
+          left: 0
+          min-width: 100%
+          opacity: 0
+          visibility: hidden
+          pointer-events: none
+          transition: opacity .3s
+          box-sizing: border-box
+          padding: 55px 20px 20px
+
+          a
+            +font(16px, 20px)
+            transition: font-weight .3s
+
+            &:hover
+              transition: font-weight .3s
+              font-weight: bold
+
+          li:not(:last-child)
+            margin-block-end: 14px
+
+        &:hover .navigation__item
+          &-list
+            opacity: 1
+            visibility: visible
+            pointer-events: all
+            transition: opacity .3s
+            border-radius: 8px
+            background: $light
+
+          &-title,
+          &-list a
+            color: $base
+
+          &-title
+            font-weight: bold
+
+    .social-links
+      +screen($tablet)
+        display: none
+
+      &__icon:not(:last-child)
+        margin-inline-end: 30px

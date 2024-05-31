@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.logo
+  display: flex
+  align-items: center
+  +font(24px, 30px)
+  font-family: $font-brand
+  font-weight: 700
+  text-transform: uppercase
+
+  &__img
+    margin-inline-end: 20px
