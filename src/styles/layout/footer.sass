@@ -13,3 +13,20 @@
   &__wrap
     box-sizing: border-box
     padding-block: 40px
+
+  .navigation__item
+    &:not(:last-child)
+      margin-inline-end: 8vw
+
+    &-title
+      +font(18px, 24px)
+      font-weight: 700
+      margin-block-end: 20px
+
+    &-list
+      a
+        +font(16px, 20px)
+        color: $neutral
+
+      li
+        margin-block-end: 12px
