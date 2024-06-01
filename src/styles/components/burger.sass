@@ -71,21 +71,19 @@
   .social-links
     display: flex
     flex-direction: column
+    grid-row-gap: 110px
 
     &__icon
       position: relative
 
-      &:not(:last-child)
-        margin-block-end: 110px
-
-        &::after
-          content: ''
-          position: absolute
-          height: 60px
-          width: 1px
-          background-color: $light
-          top: 46px
-          left: 12px
+      &:not(:last-child)::after
+        content: ''
+        position: absolute
+        height: 60px
+        width: 1px
+        background-color: $light
+        top: 46px
+        left: 12px
 
   &.active .burger
     &__icon-line

@@ -17,28 +17,56 @@
     margin-block-end: 42px
 
   &__content
-    box-sizing: border-box
-    padding-inline: 20px
     display: grid
     grid-template-columns: repeat(12, 1fr)
     grid-template-rows: repeat(19, auto)
     background: url(../assets/img/svg/roadmap.svg) no-repeat 45% 19px/auto calc(100% - 19px)
-    +screen($mobile)
+    +screen($desktop-sm)
+      grid-template-columns: 0 repeat(10, 1fr) 0
+    +screen($tablet)
       display: block
+      max-width: 500px
+      margin: 0 auto
 
     &-item
-      width: fit-content
+      margin-block-end: 20px
+      +screen($tablet)
+        margin-block-end: 13px
 
       &--data
         +font(40px, 48px)
         font-weight: 700
+        margin-inline-start: 20px
 
       &--chat
+        position: relative
         box-sizing: border-box
         padding: 11px 13px
         +font(18px, 38px)
         background: $light
         color: $base
+        border-radius: 8px
+
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          display: block
+          height: 8px
+          width: 17px
+
+        &:not(.dark)::before
+          left: -8px
+          background: url(../assets/img/svg/chat-tail.svg) no-repeat 0 0/100%
+
+        &.dark
+          color: $light
+          background: $neutral
+
+          &::before
+            right: -8px
+            transform: scaleX(-1)
+            background: url(../assets/img/svg/chat-tail-neutral.svg) no-repeat 0 0/100%
 
       &:nth-child(1)
         grid-area: 1 / 4 / 2 / 6
@@ -46,73 +74,69 @@
 
       &:nth-child(2)
         grid-area: 2 / 6 / 3 / 9
-        margin-block-end: 20px
 
       &:nth-child(3)
         grid-area: 3 / 5 / 4 / 8
-        margin-block-end: 20px
 
       &:nth-child(4)
         grid-area: 4 / 4 / 5 / 8
-        margin-block-end: 20px
 
       &:nth-child(5)
         grid-area: 5 / 6 / 6 / 10
         margin-block-end: 238px
+        +screen($desktop-sm)
+          margin-block-end: 140px
 
       &:nth-child(6)
         grid-area: 6 / 9 / 7 / 10
         margin-block-end: 56px
+        +screen($desktop-sm)
+          margin-block-end: 105px
 
       &:nth-child(7)
         grid-area: 7 / 8 / 8 / 11
-        margin-block-end: 20px
 
       &:nth-child(8)
         grid-area: 8 / 6 / 9 / 10
-        margin-block-end: 20px
 
       &:nth-child(9)
-         grid-area: 9 / 8 / 10 / 12
-         margin-block-end: 20px
+        grid-area: 9 / 8 / 10 / 12
 
       &:nth-child(10)
         grid-area: 10 / 6 / 11 / 10
         margin-block-end: 270px
 
       &:nth-child(11)
-         grid-area: 11 / 3 / 12 / 4
-         margin-block-end: 56px
+        grid-area: 11 / 3 / 12 / 4
+        margin-block-end: 56px
 
       &:nth-child(12)
         grid-area: 12 / 4 / 13 / 8
-        margin-block-end: 20px
 
       &:nth-child(13)
         grid-area: 13 / 4 / 14 / 8
-        margin-block-end: 20px
 
       &:nth-child(14)
         grid-area: 14 / 2 / 15 / 5
-        margin-block-end: 20px
 
       &:nth-child(15)
         grid-area: 15 / 4 / 16 / 8
-        margin-block-end: 20px
 
       &:nth-child(16)
         grid-area: 16 / 4 / 17 / 7
-        margin-block-end: 20px
 
       &:nth-child(17)
         grid-area: 17 / 2 / 18 / 6
         margin-block-end: 167px
+        +screen($desktop-sm)
+          margin-block-end: 80px
 
       &:nth-child(18)
         grid-area: 18 / 9 / 19 / 10
         margin-block-end: 32px
+        +screen($desktop-sm)
+          margin-block-end: 120px
 
       &:nth-child(19)
         grid-area: 19 / 8 / 20 / 11
         margin-block-end: 73px
-

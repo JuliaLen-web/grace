@@ -14,19 +14,20 @@
     box-sizing: border-box
     padding-block: 40px
 
-  .navigation__item
-    &:not(:last-child)
-      margin-inline-end: 8vw
+  .navigation
+    &__wrap
+      grid-column-gap: 8vw
 
-    &-title
-      +font(18px, 24px)
-      font-weight: 700
-      margin-block-end: 20px
+    &__item
+      &-title
+        +font(18px, 24px)
+        font-weight: 700
+        margin-block-end: 20px
 
-    &-list
-      a
-        +font(16px, 20px)
-        color: $neutral
+      &-list
+        a
+          +font(16px, 20px)
+          color: $neutral
 
-      li
-        margin-block-end: 12px
+        li
+          margin-block-end: 12px
