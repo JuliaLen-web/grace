@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.contacts
+  background: linear-gradient(155.27deg, #121212 48%, rgba(18, 18, 18, 0.987453) 55%, rgba(18, 18, 18, 0.8) 65%, #121212 75%, #121212 100%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
+  box-sizing: border-box
+  padding-block: 160px
+  +screen($mobile)
+    padding-block: 100px 60px
+
+  &__title
+    +font(33px, 44px)
+    font-weight: 700
+    margin-bottom: 30px
+
+  &__content
+    width: 60%
+    min-width: 650px
+    display: grid
+    grid-template-columns: repeat(2, 50%)
+    grid-gap: 20px
+    +screen($mobile)
+      width: 100%
+      min-width: auto
+      grid-template-columns: 100%
+
+    &-item
+      border-radius: 8px
+      background: $neutral-secondary
+      box-sizing: border-box
+      min-height: 98px
+      padding: 30px
+      display: flex
+      align-items: center
+      +font(20px, 26px)
+      transition: filter .3s
+      +screen($mobile)
+        min-height: 80px
+        padding: 30px 20px
+
+      &-icon
+        margin-inline-end: 16px
+
+      &:hover
+        filter: invert(1)
+        transition: filter .3s

@@ -1,0 +1,30 @@
+extends ../layouts/layout.pug
+
+block title
+  | Contacts
+
+block content
+  .contacts
+    .container
+      .contacts__title Connect with us
+      .contacts__content
+        a(href="#").contacts__content-item
+          .contacts__content-item-icon
+            img(src=require('@/assets/img/svg/social-net.svg') alt="Grace.global")
+          | Grace.global
+        a(href="#").contacts__content-item
+          .contacts__content-item-icon
+            img(src=require('@/assets/img/svg/social-x.svg') alt="x")
+          | Our twitter
+        a(href="#").contacts__content-item
+          .contacts__content-item-icon
+            img(src=require('@/assets/img/svg/social-tg.svg') alt="tg")
+          | Our developers telegram
+        a(href="#").contacts__content-item
+          .contacts__content-item-icon
+            img(src=require('@/assets/img/svg/social-tg.svg') alt="tg")
+          | Our Community telegram
+        a(href="#").contacts__content-item
+          .contacts__content-item-icon
+            img(src=require('@/assets/img/svg/social-x.svg') alt="x")
+          | Our discord

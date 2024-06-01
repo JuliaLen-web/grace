@@ -13,16 +13,33 @@
   &__wrap
     box-sizing: border-box
     padding-block: 40px
+    +screen($mobile)
+      padding-block: 30px
+
+  &__wrap
+    +screen($mobile)
+      flex-wrap: wrap
+      align-items: center
+
+  .logo
+    +screen($mobile)
+      min-width: 100%
+      margin-block-end: 30px
 
   .navigation
     &__wrap
       grid-column-gap: 8vw
+      +screen($mobile)
+        flex-direction: column
+        grid-row-gap: 30px
 
     &__item
       &-title
         +font(18px, 24px)
         font-weight: 700
         margin-block-end: 20px
+        +screen($mobile)
+          margin-block-end: 14px
 
       &-list
         a
@@ -31,3 +48,31 @@
 
         li
           margin-block-end: 12px
+
+  .social-links
+    display: flex
+    grid-column-gap: 30px
+    +screen($tablet)
+      flex-direction: column
+      grid-row-gap: 70px
+    +screen($mobile)
+      grid-row-gap: 110px
+
+    &__icon
+      +screen($tablet)
+        position: relative
+
+      &:not(:last-child)::after
+        content: ''
+        position: absolute
+        height: 20px
+        width: 1px
+        background-color: $light
+        top: 46px
+        left: 12px
+        +screen($tablet)
+        +screen($mobile)
+          height: 60px
+
+
+
