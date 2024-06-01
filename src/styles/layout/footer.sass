@@ -63,7 +63,6 @@
         position: relative
 
       &:not(:last-child)::after
-        content: ''
         position: absolute
         height: 20px
         width: 1px
@@ -71,6 +70,7 @@
         top: 46px
         left: 12px
         +screen($tablet)
+          content: ''
         +screen($mobile)
           height: 60px
 
