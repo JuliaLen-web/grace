@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.tokenomics
+  background: linear-gradient(153.12deg, rgba(18, 18, 18, 0.3) -3.21%, #121212 3.46%, rgba(18, 18, 18, 0.8) 63.08%, #121212 94.32%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
+  box-sizing: border-box
+  padding-block: 160px 75px
+
+  &__section
+    &-supertitle
+      +font(16px, 20px)
+
+    &-title
+      +font(40px, 52px)
+
+    &-subtitle
+      +font(20px, 26px)
+
+  &__blocks
+    display: flex
+    align-items: center
+    justify-content: space-between
+    grid-gap: 20px
+    margin-block-end: 20px
+
+    &-item
+      background: $neutral-secondary
+      border-radius: 8px
+      width: 100%
+      height: 220px
+      box-sizing: border-box
+      padding: 40px
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+  &__statistics,
+  &__table
+    min-width: 985px
+    background: $neutral-secondary
+    box-sizing: border-box
+    padding: 40px
+    border-radius: 8px
+    margin-block-end: 20px
+
+  &__statistics
+
+
+  &__table
+    table
+      width: 100%
+
+      td
+        +font(18px, 24px)
+        width: 25%
+        box-sizing: border-box
+        padding-block-end: 28px
+
+        &:first-child
+          font-weight: 700
