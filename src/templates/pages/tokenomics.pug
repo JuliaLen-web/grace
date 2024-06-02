@@ -6,39 +6,57 @@ block title
 block content
   .tokenomics
     .container
-      h1.tokenomics__title What is the
-        span GRACE TOKEN?
-      .tokenomics__subtitle $GRACE cryptocurrency is the native utility token of the GRACE Ecosystem.
-      .tokenomics__blocks
-        .tokenomics__blocks-item
-          .tokenomics__blocks-item-type Token ticker
-          .tokenomics__blocks-item-name $GRACE
-        .tokenomics__blocks-item
-          .tokenomics__blocks-item-type Token name
-          .tokenomics__blocks-item-name GRACE
+      section.tokenomics__section
+        h1.tokenomics__title What is the &#x20;
+          span GRACE TOKEN?
+        .tokenomics__subtitle $GRACE cryptocurrency is the native utility token of the GRACE Ecosystem.
+        .tokenomics__blocks.tokenomics__blocks--heroblock
+          .tokenomics__blocks-item
+            .tokenomics__blocks-item-type Token ticker
+            .tokenomics__blocks-item-info $GRACE
+          .tokenomics__blocks-item
+            .tokenomics__blocks-item-type Token name
+            .tokenomics__blocks-item-info GRACE
       section.tokenomics__section
         .tokenomics__section-supertitle TOKEN UTILITY
         .separate
         h2.tokenomics__section-title UNIFYING TOKEN ACROSS WEB3 MARKETS UNDER ONE SAFE, CAPITAL-EFFICIENT MULTI-CHAIN PROTOCOL
         .tokenomics__section-subtitle Grace provides its token holders with the following use cases:
-      section.tokenomics__section
+        .tokenomics__blocks.tokenomics__blocks--vertical
+          .tokenomics__blocks-item
+            .tokenomics__blocks-item-image
+              img(src=require('@/assets/img/content/utility-1.png') alt="")
+            .tokenomics__blocks-item-title Grow
+            .tokenomics__blocks-item-text Stakers of $GRACE get access to regular benefits and value sharefrom new ecosystem apps and infrastructure partners
+          .tokenomics__blocks-item
+            .tokenomics__blocks-item-image
+              img(src=require('@/assets/img/content/utility-2.png') alt="")
+            .tokenomics__blocks-item-title Stake
+            .tokenomics__blocks-item-text Lock $GRACE tokens on DEXs and benefit from competitive APRs
+          .tokenomics__blocks-item
+            .tokenomics__blocks-item-image
+              img(src=require('@/assets/img/content/utility-3.png') alt="")
+            .tokenomics__blocks-item-title Simplify
+            .tokenomics__blocks-item-text Use $GRACE as a direct payment method for Grace Net integration fees, subscription services, and access to special events or developer tools. This utility ensures constant demand for token within the ecosystem
+      section.tokenomics__section.tokenomics__section--graph
         .tokenomics__section-supertitle TOKEN DISTRIBUTION
         .separate
         h2.tokenomics__section-title ECOSYSTEM CENTRED
         .tokenomics__section-subtitle The largest portion of the token supply is designated for the ecosystem and distributed as part of a strategic plan to promote robust ecosystem development.
+        include ../components/graph
 
       section.tokenomics__section
         h2.tokenomics__section-title TOKEN SUPPLY AND CIRCULATION
         .tokenomics__blocks
           .tokenomics__blocks-item
             .tokenomics__blocks-item-type Max supply
-            .tokenomics__blocks-item-name 5 000 000 000
+            .tokenomics__blocks-item-info 5 000 000 000
           .tokenomics__blocks-item
             .tokenomics__blocks-item-type Total supply
-            .tokenomics__blocks-item-name 5 000 000 000
+            .tokenomics__blocks-item-info 5 000 000 000
         .overflow-scroll
           .tokenomics__statistics
-
+            include ../abstracts/statistic
         .overflow-scroll
           .tokenomics__table
             table

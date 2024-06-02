@@ -2,9 +2,6 @@
 @use '../../abstracts/mixins' as *
 
 .features
-  background: url(../assets/img/global/noisy-texture.png) repeat center/150px
-  border-radius: 60px
-  box-sizing: border-box
   padding-block: 60px 80px
 
   &__header
@@ -32,15 +29,14 @@
       bottom: 0
 
     &-title
-      +font(96px, 110px)
+      font-size: clamp(50px, 10vw, 96px)
+      line-height: 115%
       font-family: $font-headers
       text-transform: uppercase
-      letter-spacing: 30px
+      letter-spacing: 2.1vw
       font-weight: 900
       margin-bottom: 50px
       +screen($mobile)
-        +font(60px, 96px)
-
 
     &-title,
     &-subtitle
@@ -59,25 +55,49 @@
   &__content
     max-width: 922px
     margin: 0 auto
+    +screen($tablet)
+      grid-row-gap: 60px
 
   &__item
     display: flex
     align-items: center
     justify-content: space-between
+    +screen($mobile)
+      flex-direction: column
+      background: $dark
+      border-radius: 8px
+      box-sizing: border-box
+      padding: 20px
+
+    &:not(:last-child)
+      +screen($tablet)
+        margin-block-end: 60px
+      +screen($mobile)
+        margin-block-end: 20px
 
     &.reverse
       flex-direction: row-reverse
+      +screen($mobile)
+        flex-direction: column
 
     &-img
       max-width: 27%
+      +screen($mobile)
+        max-width: 50%
 
     &-content
       max-width: 65%
+      +screen($mobile)
+        max-width: none
 
     &-title
       +font(30px, 39px)
       font-family: $font-titles
       font-weight: 700
+      +screen($mobile)
+        +font(26px, 32px)
 
     &-text
       +font(16px, 28px)
+      +screen($mobile)
+        line-height: 26px

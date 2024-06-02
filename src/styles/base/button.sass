@@ -8,10 +8,15 @@
   color: $base
   box-sizing: border-box
   padding: 12px 30px
-  +font(18px, 22px)
+  +font(18px, 122%)
   border-radius: 8px
   display: block
   width: fit-content
+  +screen($mobile)
+    font-size: 14px
+
+    &:not(.button--border)
+      font-weight: 700
 
   &--border
     background: none

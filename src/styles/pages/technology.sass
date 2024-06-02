@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.technology
+  background: $dark
+  &__blockquote
+    background: linear-gradient(-23deg, rgba(18, 18, 18, 0.8) 8%, rgba(18, 18, 18, 0.86) 22%, rgba(18, 18, 18, 0.9) 52%, rgba(18, 18, 18, 0.8) 75%, #121212 98%),  url(../assets/img/svg/grid.svg) repeat 0 0/105% auto, url(../assets/img/global/noisy-texture.png) repeat center/150px
+    border-radius: 0 0 60px 60px
+    box-sizing: border-box
+    padding-block: 160px 75px
+    min-height: 80svh
+
+  &__features
+    .container
+      padding-inline: 140px
+
+    &:not(.noisy-bg)
+      box-sizing: border-box
+      padding-block: 80px
+
+    &.noisy-bg
+      padding-block: 60px 80px

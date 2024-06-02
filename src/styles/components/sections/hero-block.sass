@@ -9,14 +9,19 @@
   margin-block-end: -60px
   +screen($tablet)
     min-height: 90svh
+    padding-block-start: 18svh
 
   &__title
     font-family: $font-brand
-    +font(50px, 65px)
     margin: 0 0 20px
+    font-size: clamp(28px, 5vw, 50px)
+    line-height: 130%
 
   &__subtitle
-    +font(20px, 36px)
+    font-size: clamp(14px, 2vw, 20px)
+    line-height: 180%
+    +screen($mobile)
+      opacity: 0.8
 
   &__nav
     display: flex
@@ -24,9 +29,14 @@
     justify-content: center
     margin: 140px auto 20px
     max-width: 500px
+    +screen($mobile)
+      flex-direction: column
+      margin-block: 15svh 20px
 
     &-wrap
       width: 50%
+      +screen($mobile)
+        width: 100%
 
       .button
         margin-block-end: 14px
