@@ -25,21 +25,35 @@
 
     &-supertitle
       +font(16px, 20px)
+      color: $neutral-light
+
+    .separate-line
+      margin-block: 14px
+      width: 152px
+      opacity: 0.6
 
     &-title
       +font(40px, 52px)
+      margin-block-end: 20px
+      max-width: 65%
 
     &-subtitle
       +font(20px, 26px)
+      margin-block-end: 40px
+      color: $neutral-light
 
     &--graph
       overflow: hidden
+      background: radial-gradient(34% 44% at 64% 48%, rgba(18, 18, 18, 0.9) 70%, rgba(18, 18, 18, 0.3) 96%)
 
       .tokenomics__section-title,
       .tokenomics__section-subtitle
         max-width: 45%
         +screen($tablet)
           max-width: 100%
+
+    &--statistics
+      background: linear-gradient(13deg, rgba(18, 18, 18, 0.8) 19%, #121212 38%, #121212 77%, rgba(18, 18, 18, 0.9) 87%, rgba(18, 18, 18, 0.3) 90%)
 
   &__blocks
     display: flex
@@ -98,7 +112,7 @@
       &-info
         +font(30px, 36px)
 
-  &__statistics,
+  &__chart,
   &__table
     min-width: 985px
     background: $neutral-secondary

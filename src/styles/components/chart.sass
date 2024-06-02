@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.chart
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  &__numbers
+    position: relative
+    z-index: 1
+
+    &-item
+      font-weight: 700
+      +font(18px, 24px)
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        left: calc(100% + 11px)
+        width: 64vw
+        height: 2px
+        display: flex
+        top: 14px
+        background: url(../assets/img/svg/line.svg) repeat 0 0/100% auto
+
+      &:not(:last-child)
+        margin-block-end: 62px
+
+  &__graph
+    position: relative
+    z-index: 2
+
+    svg
+      margin-block-end: 40px
+
+    &-steps
+      +font(16px, 20px)
+      color: $neutral-light
+      letter-spacing: 2.3px
+
+  &__names-item
+    display: flex
+    align-items: center
+    +font(18px, 24px)
+
+    &:not(:last-child)
+      margin-block-end: 20px
+
+    &-color
+      display: inline-block
+      width: 18px
+      height: 18px
+      border-radius: 4px
+      background: #7e8bff
+      margin-inline-end: 14px

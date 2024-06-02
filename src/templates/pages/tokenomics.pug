@@ -19,7 +19,7 @@ block content
             .tokenomics__blocks-item-info GRACE
       section.tokenomics__section
         .tokenomics__section-supertitle TOKEN UTILITY
-        .separate
+        .separate-line
         h2.tokenomics__section-title UNIFYING TOKEN ACROSS WEB3 MARKETS UNDER ONE SAFE, CAPITAL-EFFICIENT MULTI-CHAIN PROTOCOL
         .tokenomics__section-subtitle Grace provides its token holders with the following use cases:
         .tokenomics__blocks.tokenomics__blocks--vertical
@@ -40,12 +40,11 @@ block content
             .tokenomics__blocks-item-text Use $GRACE as a direct payment method for Grace Net integration fees, subscription services, and access to special events or developer tools. This utility ensures constant demand for token within the ecosystem
       section.tokenomics__section.tokenomics__section--graph
         .tokenomics__section-supertitle TOKEN DISTRIBUTION
-        .separate
+        .separate-line
         h2.tokenomics__section-title ECOSYSTEM CENTRED
         .tokenomics__section-subtitle The largest portion of the token supply is designated for the ecosystem and distributed as part of a strategic plan to promote robust ecosystem development.
         include ../components/graph
-
-      section.tokenomics__section
+      section.tokenomics__section.tokenomics__section--statistics
         h2.tokenomics__section-title TOKEN SUPPLY AND CIRCULATION
         .tokenomics__blocks
           .tokenomics__blocks-item
@@ -55,8 +54,8 @@ block content
             .tokenomics__blocks-item-type Total supply
             .tokenomics__blocks-item-info 5 000 000 000
         .overflow-scroll
-          .tokenomics__statistics
-            include ../abstracts/statistic
+          .tokenomics__chart
+            include ../components/chart
         .overflow-scroll
           .tokenomics__table
             table
