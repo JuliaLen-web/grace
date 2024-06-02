@@ -33,9 +33,13 @@
       +font(20px, 26px)
 
     &--graph
+      overflow: hidden
+
       .tokenomics__section-title,
       .tokenomics__section-subtitle
         max-width: 45%
+        +screen($tablet)
+          max-width: 100%
 
   &__blocks
     display: flex
@@ -75,11 +79,15 @@
         +font(20px, 26px)
         font-weight: 700
 
-    &--vertical .tokenomics__blocks-item
-      flex-direction: column
-      align-items: flex-start
-      justify-content: flex-start
-      padding: 25px 40px 55px
+    &--vertical
+      +screen($desktop-sm)
+        flex-direction: column
+
+      .tokenomics__blocks-item
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        padding: 25px 40px 55px
 
     &--heroblock .tokenomics__blocks-item
       min-height: 220px
@@ -99,14 +107,13 @@
     border-radius: 8px
     margin-block-end: 20px
 
-  &__statistics,
-  &__graph
-
-  &__statistics
-
   .graph
-    margin-inline-start: auto
+    margin-inline: auto 110px
     margin-block-start: -100px
+    +screen($desktop-sm)
+      margin-block-start: 0
+    +screen($tablet)
+      margin-block-start: 120px
 
   &__table
     table
