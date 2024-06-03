@@ -25,6 +25,8 @@
         display: flex
         top: 14px
         background: url(../assets/img/svg/line.svg) repeat 0 0/100% auto
+        +screen($tablet)
+          width: 930px
 
       &:not(:last-child)
         margin-block-end: 62px
@@ -57,7 +59,7 @@
         width: 18px
         height: 18px
         border-radius: 4px
-        background: #7e8bff
+        background: $neutral
         margin-inline-end: 14px
 
       &:nth-of-type(1) .chart__names-item-color

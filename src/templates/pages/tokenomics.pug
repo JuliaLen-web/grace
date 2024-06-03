@@ -8,6 +8,7 @@ block content
     .container
       section.tokenomics__section
         h1.tokenomics__title What is the &#x20;
+          br.mobile
           span GRACE TOKEN?
         .tokenomics__subtitle $GRACE cryptocurrency is the native utility token of the GRACE Ecosystem.
         .tokenomics__blocks.tokenomics__blocks--heroblock
@@ -45,7 +46,7 @@ block content
         .tokenomics__section-subtitle The largest portion of the token supply is designated for the ecosystem and distributed as part of a strategic plan to promote robust ecosystem development.
         include ../components/graph
       section.tokenomics__section.tokenomics__section--statistics
-        h2.tokenomics__section-title TOKEN SUPPLY AND CIRCULATION
+        h2.tokenomics__section-title TOKEN SUPPLY AND&nbsp;CIRCULATION
         .tokenomics__blocks
           .tokenomics__blocks-item
             .tokenomics__blocks-item-type Max supply
@@ -53,7 +54,7 @@ block content
           .tokenomics__blocks-item
             .tokenomics__blocks-item-type Total supply
             .tokenomics__blocks-item-info 5 000 000 000
-        .overflow-scroll
+        .overflow-scroll-desktop.tokenomics__chart-wrap
           .tokenomics__chart
             include ../components/chart
         .overflow-scroll
@@ -111,4 +112,4 @@ block content
                   td 40,000,000
                   td 250,000,000
                   td 250,000,000
-        a(href="#").button Tokenomics Spreadsheet
+        a(href="https://docs.google.com/spreadsheets/d/1Shfncsgu9iewXAQTuY4TxkKUfInaZkcL/edit?usp=sharing&ouid=101825301144777938961&rtpof=true&sd=true").button Tokenomics Spreadsheet

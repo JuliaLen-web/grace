@@ -14,6 +14,7 @@ body
   flex-direction: column
   background: linear-gradient(155.27deg, #121212 33%, rgba(18, 18, 18, 0.987453) 40%, rgba(18, 18, 18, 0.8) 50.44%, #121212 60%, #121212 85%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto, $base
 
+body, *
   &::-webkit-scrollbar
     width: 8px
     height: 8px
@@ -22,6 +23,7 @@ body
       display: none
 
     &-thumb
+      cursor: pointer
       background: lighten($base, 10%)
       border-radius: 4px
       transition: all .3s
@@ -52,6 +54,14 @@ body
     padding-inline: 20px
     width: calc(100% + 40px)
 
+.overflow-scroll-desktop
+  +screen($desktop-sm)
+    overflow-x: auto
+    margin-inline-start: -20px
+    box-sizing: border-box
+    padding-inline: 20px
+    width: calc(100% + 40px)
+
 a
   text-decoration: none
   color: $light
@@ -64,6 +74,19 @@ img
   display: none
   +screen($tablet)
     display: block
+
+.mobile-sm
+  display: none
+  +screen($mobile)
+    display: block
+
+.desktop
+  +screen($tablet)
+    display: none
+
+.desktop-sm
+  +screen($mobile)
+    display: none
 
 .separate-line
   display: block
