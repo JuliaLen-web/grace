@@ -10,6 +10,18 @@
     box-sizing: border-box
     padding: 23svh 100px 75px
     min-height: 80svh
+    +screen($mobile)
+      padding: 15svh 0 75px
+      background: url(../assets/img/global/noisy-texture.png) repeat center/150px
+
+    .container
+      +screen($mobile)
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &-logo
+      margin-block-end: 20px
 
     blockquote
       quotes: "\201C""\201D""\2018""\2019"
@@ -17,6 +29,11 @@
       width: 100%
       margin: 0 0 40px auto
       position: relative
+      +screen($mobile)
+        order: 4
+        margin-block: 0
+        margin-inline: 35px 8px
+        max-width: fit-content
 
       &::before,
       &::after
@@ -24,17 +41,26 @@
         position: absolute
         color: $neutral
         opacity: 0.3
+        +screen($mobile)
+          +font(50px, 50px)
+          opacity: 0.6
 
       &::before
         content: open-quote
         top: -65px
         left: -110px
+        +screen($mobile)
+          top: 20px
+          left: -35px
 
       &::after
         content: close-quote
         bottom: 30px
         right: -60px
         transform: translate(0, 100%)
+        +screen($mobile)
+          bottom: 20px
+          right: 10px
 
       cite
         color: $neutral-light
@@ -45,20 +71,30 @@
       p
         +font(24px, 38px)
         font-style: italic
+        +screen($mobile)
+          +font(14px, 20px)
 
     &-title
       +font(60px, 78px)
       font-weight: 700
       color: $neutral-light
       margin-inline-start: 20px
+      +screen($mobile)
+        font-family: $font-headers
+        letter-spacing: 4px
+        text-align: center
+        +font(32px, 42px)
+        margin-block-end: 60px
 
   &__features
     padding-inline: 120px
     margin-block-end: 80px
+    +screen($tablet)
+      padding-inline: 0
 
     &:not(.noisy-bg)
       box-sizing: border-box
-      padding-block: 80px
+      padding-block-start: 80px
 
     &.noisy-bg
       padding-block: 60px 80px
@@ -67,10 +103,16 @@
       display: flex
       justify-content: space-between
       align-items: center
+      +screen($desktop-sm)
+        flex-direction: column
+      +screen($mobile)
+        align-items: flex-start
 
       &-title
         +font(60px, 78px)
         font-weight: 700
+        font-size: clamp(32px, 5vw, 60px)
+        line-height: 130%
 
         span
           color: $neutral-light
@@ -80,6 +122,10 @@
         +font(20px, 30px)
         text-align: end
         max-width: 424px
+        +screen($desktop-sm)
+          text-align: center
+        +screen($mobile)
+          text-align: start
 
     .separate-line
       opacity: 0.5
@@ -89,9 +135,15 @@
         width: 107px
         transform: rotate(90deg)
         margin-inline-start: 7%
+        +screen($desktop-sm)
+          display: none
 
       &:not(.separate-line--vertical)
         margin-inline-start: auto
         max-width: 408px
         margin-block: 80px
+        +screen($mobile)
+          margin-block: 20px
+          width: 40%
+          margin-inline-start: 0
 

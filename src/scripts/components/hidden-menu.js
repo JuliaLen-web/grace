@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
   const toggleMenu = () => {
     hiddenMenu.classList.toggle('active')
 
-    if (document.querySelector('.active')) {
+    if (hiddenMenu.classList.contains('active')) {
       body.classList.add('overflow-all')
     } else {
       body.classList.remove('overflow-all')

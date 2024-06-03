@@ -5,19 +5,24 @@
   box-sizing: border-box
   padding-block: 120px 80px
   background:  url(../assets/img/global/about-bg.png) no-repeat center/cover
+  +screen($mobile)
+    padding-block: 80px
 
   &__supertitle
-    +font(40px, 52px)
+    font-size: clamp(20px, 5vw, 40px)
+    line-height: 130%
     color: $neutral-light
     font-weight: 700
 
   &__title
-    +font(60px, 78px)
+    font-size: clamp(30px, 5vw, 60px)
+    line-height: 130%
     font-weight: 700
     margin-block-end: 20px
 
   &__subtitle
-    +font(20px, 26px)
+    font-size: clamp(16px, 1vw, 20px)
+    line-height: 130%
     color: $neutral-light
     margin-block-end: 40px
 
@@ -33,3 +38,5 @@
       height: 100%
       left: 0
       top: 0
+      +screen($mobile)
+        background-size: 30px auto

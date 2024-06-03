@@ -4,6 +4,8 @@
 .accordion
   box-sizing: border-box
   padding-block: 40px
+  +screen($mobile)
+    padding-block: 30px
 
   &:not(:last-of-type)
     border-block-end: 1px solid $neutral
@@ -13,13 +15,20 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
-    +font(40px, 52px)
+    font-size: clamp(22px, 3vw, 40px)
+    line-height: 130%
     font-weight: 700
 
     &-btn
+      margin-inline-start: 20px
       position: relative
       width: 46px
       height: 46px
+      flex-shrink: 0
+      +screen($mobile)
+        margin-block-start: -5px
+        width: 34px
+        height: 34px
 
       &::before,
       &::after
@@ -45,18 +54,26 @@
 
     &-wrap
       max-width: 80%
+      +screen($mobile)
+        max-width: 100%
 
       ul
-        margin: 20px 0 0
+        box-sizing: border-box
+        padding-block-start: 20px
+        margin: 0
 
         li
           +font(22px, 40px)
           color: $neutral-light
+          +screen($mobile)
+            +font(18px, 24px)
 
       p
         +font(20px, 26px)
         color: $neutral-light
         margin: 20px 0 0
+        +screen($mobile)
+          +font(18px, 24px)
 
   &.active .accordion
     &__head-btn::after
