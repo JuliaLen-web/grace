@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+.accordion
+  box-sizing: border-box
+  padding-block: 40px
+
+  &:not(:last-of-type)
+    border-block-end: 1px solid $neutral
+
+  &__head
+    cursor: pointer
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    +font(40px, 52px)
+    font-weight: 700
+
+    &-btn
+      position: relative
+      width: 46px
+      height: 46px
+
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: calc(50% - 1.5px)
+        background: $light
+        height: 3px
+        width: 100%
+        border-radius: 2px
+
+      &::after
+        transform: rotate(90deg)
+        transition: transform .3s
+
+  &__content
+    max-height: 0
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    transition: max-height .3s, opacity .3s
+
+    &-wrap
+      max-width: 80%
+
+      ul
+        margin: 20px 0 0
+
+        li
+          +font(22px, 40px)
+          color: $neutral-light
+
+      p
+        +font(20px, 26px)
+        color: $neutral-light
+        margin: 20px 0 0
+
+  &.active .accordion
+    &__head-btn::after
+      transform: rotate(0deg)
+      transition: transform .3s
+
+    &__content
+      opacity: 1
+      visibility: visible
+      pointer-events: all
+

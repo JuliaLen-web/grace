@@ -8,12 +8,53 @@
     background: linear-gradient(-23deg, rgba(18, 18, 18, 0.8) 8%, rgba(18, 18, 18, 0.86) 22%, rgba(18, 18, 18, 0.9) 52%, rgba(18, 18, 18, 0.8) 75%, #121212 98%),  url(../assets/img/svg/grid.svg) repeat 0 0/105% auto, url(../assets/img/global/noisy-texture.png) repeat center/150px
     border-radius: 0 0 60px 60px
     box-sizing: border-box
-    padding-block: 160px 75px
+    padding: 23svh 100px 75px
     min-height: 80svh
 
+    blockquote
+      quotes: "\201C""\201D""\2018""\2019"
+      max-width: 475px
+      width: 100%
+      margin: 0 0 40px auto
+      position: relative
+
+      &::before,
+      &::after
+        +font(205px, 205px)
+        position: absolute
+        color: $neutral
+        opacity: 0.3
+
+      &::before
+        content: open-quote
+        top: -65px
+        left: -110px
+
+      &::after
+        content: close-quote
+        bottom: 30px
+        right: -60px
+        transform: translate(0, 100%)
+
+      cite
+        color: $neutral-light
+        font-style: italic
+        font-size: 18px
+        font-weight: 500
+
+      p
+        +font(24px, 38px)
+        font-style: italic
+
+    &-title
+      +font(60px, 78px)
+      font-weight: 700
+      color: $neutral-light
+      margin-inline-start: 20px
+
   &__features
-    .container
-      padding-inline: 140px
+    padding-inline: 120px
+    margin-block-end: 80px
 
     &:not(.noisy-bg)
       box-sizing: border-box
@@ -21,3 +62,36 @@
 
     &.noisy-bg
       padding-block: 60px 80px
+
+    &-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      &-title
+        +font(60px, 78px)
+        font-weight: 700
+
+        span
+          color: $neutral-light
+
+      &-text
+        color: $neutral-light
+        +font(20px, 30px)
+        text-align: end
+        max-width: 424px
+
+    .separate-line
+      opacity: 0.5
+      background: $neutral
+
+      &--vertical
+        width: 107px
+        transform: rotate(90deg)
+        margin-inline-start: 7%
+
+      &:not(.separate-line--vertical)
+        margin-inline-start: auto
+        max-width: 408px
+        margin-block: 80px
+
