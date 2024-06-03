@@ -4,34 +4,45 @@
 .roadmap
   background: linear-gradient(153.12deg, rgba(18, 18, 18, 0.3) -3.21%, #121212 3.46%, rgba(18, 18, 18, 0.8) 63.08%, #121212 94.32%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
   box-sizing: border-box
-  padding-block: 160px 75px
+  padding-block: 23svh 75px
 
   &__title
-    +font(96px, 192px)
     font-family: $font-headers
     letter-spacing: 22px
+    font-size: clamp(28px, 5vw, 96px)
+    line-height: 200%
+    +screen($mobile-sm)
+      letter-spacing: 10px
 
   &__subtitle
-    +font(30px, 38px)
+    font-size: clamp(20px, 2vw, 30px)
+    line-height: 126%
     font-family: $font-titles
     margin-block-end: 42px
+
+    span
+      color: $neutral-light
 
   &__content
     display: grid
     grid-template-columns: repeat(12, 1fr)
     grid-template-rows: repeat(19, auto)
-    background: url(../assets/img/svg/roadmap.svg) no-repeat 45% 19px/auto calc(100% - 19px)
+    background: url(../assets/img/svg/roadmap.svg) no-repeat 45% 19px / auto calc(100% - 19px)
     +screen($desktop-sm)
       grid-template-columns: 0 repeat(10, 1fr) 0
     +screen($tablet)
       display: block
       max-width: 500px
       margin: 0 auto
+      box-sizing: border-box
+      padding-bottom: 10px
+      background-size: 100%
+    +screen($mobile-sm)
+      max-width: 280px
+      background: url(../assets/img/svg/roadmap-mobile.svg) no-repeat center 20px / 100%
 
     &-item
       margin-block-end: 20px
-      +screen($tablet)
-        margin-block-end: 13px
 
       &--data
         +font(40px, 48px)
@@ -39,6 +50,8 @@
         margin-inline-start: 20px
         +screen($tablet)
           margin-inline-start: 0
+        +screen($mobile)
+          +font(24px, 48px)
 
       &--chat
         position: relative
@@ -48,6 +61,8 @@
         background: $light
         color: $base
         border-radius: 8px
+        +screen($mobile-sm)
+          line-height: 28px
 
         &::before
           content: ''
@@ -73,6 +88,10 @@
       &:nth-child(1)
         grid-area: 1 / 4 / 2 / 6
         margin-block-end: 23px
+        +screen($tablet)
+          margin-block-end: 40px
+        +screen($mobile-sm)
+          margin-inline-start: 75px
 
       &:nth-child(2)
         grid-area: 2 / 6 / 3 / 9
@@ -87,13 +106,18 @@
         grid-area: 5 / 6 / 6 / 10
         margin-block-end: 238px
         +screen($desktop-sm)
-          margin-block-end: 140px
+          margin-block-end: 90px
 
       &:nth-child(6)
         grid-area: 6 / 9 / 7 / 10
         margin-block-end: 56px
         +screen($desktop-sm)
           margin-block-end: 105px
+        +screen($tablet)
+          text-align: end
+        +screen($mobile-sm)
+          margin-block-end: 18px
+          margin-inline-end: 40px
 
       &:nth-child(7)
         grid-area: 7 / 8 / 8 / 11
@@ -107,10 +131,16 @@
       &:nth-child(10)
         grid-area: 10 / 6 / 11 / 10
         margin-block-end: 270px
+        +screen($mobile-sm)
+          margin-block-end: 90px
 
       &:nth-child(11)
         grid-area: 11 / 3 / 12 / 4
         margin-block-end: 56px
+        +screen($tablet)
+          margin-inline-start: 60px
+        +screen($mobile-sm)
+          margin-block-end: 30px
 
       &:nth-child(12)
         grid-area: 12 / 4 / 13 / 8
@@ -132,12 +162,19 @@
         margin-block-end: 167px
         +screen($desktop-sm)
           margin-block-end: 80px
+        +screen($mobile-sm)
+          margin-block-end: 125px
 
       &:nth-child(18)
         grid-area: 18 / 9 / 19 / 10
         margin-block-end: 32px
         +screen($desktop-sm)
           margin-block-end: 120px
+        +screen($tablet)
+          text-align: end
+        +screen($mobile-sm)
+          margin-inline-end: 60px
+          margin-block-end: 25px
 
       &:nth-child(19)
         grid-area: 19 / 8 / 20 / 11
