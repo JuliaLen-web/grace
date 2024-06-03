@@ -9,7 +9,10 @@ body
   width: 100%
   font-family: $font-base
   color: $light
-  background: $base
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  background: linear-gradient(155.27deg, #121212 33%, rgba(18, 18, 18, 0.987453) 40%, rgba(18, 18, 18, 0.8) 50.44%, #121212 60%, #121212 85%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto, $base
 
   &::-webkit-scrollbar
     width: 8px
@@ -27,9 +30,8 @@ body
         background: lighten($base, 15%)
 
 .main
+  flex: 1 1 auto
   position: relative
-  +screen($tablet)
-    overflow: hidden
 
 .container
   position: relative
