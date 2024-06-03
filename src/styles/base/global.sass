@@ -98,3 +98,20 @@ img
   background: url(../assets/img/global/noisy-texture.png) repeat center/150px
   border-radius: 60px
   box-sizing: border-box
+
+input
+  outline: none
+  border-radius: 8px
+  border: 1px solid $light
+  background: $neutral-dark
+  box-sizing: border-box
+  padding: 14px 20px
+  +font(16px, 120%)
+  color: $light
+
+  &:focus
+    background: $neutral-dark
+
+  &::placeholder
+    +font(16px, 120%)
+    color: $neutral

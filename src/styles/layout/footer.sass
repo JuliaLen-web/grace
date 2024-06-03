@@ -12,12 +12,33 @@
     align-items: flex-start
     justify-content: space-between
 
-  .subscription,
+  &__subscription,
   &__wrap
     box-sizing: border-box
     padding-block: 40px
     +screen($mobile)
       padding-block: 30px
+
+  &__subscription
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +screen($tablet)
+      flex-direction: column
+
+    &-text,
+    .form-subscribe
+      width: 45%
+      +screen($tablet)
+        width: 100%
+
+    &-text
+      +font(34px, 44px)
+      font-weight: 700
+      +screen($tablet)
+        margin-block-end: 36px
+      +screen($mobile)
+        +font(24px, 32px)
 
   &__wrap
     +screen($mobile)

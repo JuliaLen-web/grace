@@ -1,19 +1,11 @@
 footer.footer
   .container
-    .subscription
-      .subscription__text
+    .footer__subscription
+      .footer__subscription-text
         | Stay up to date!
         br
         | Be the first to know about the latest updates and launches!
-      form.subscription__form
-        input.subscription__form-input(placeholder="E-mail...")
-        button(type="submit").button.subscription__form-submit Subscribe
-        .subscription__form-checkbox
-          input(type="checkbox" id="checkbox")
-          label(for="checkbox")
-            | By submitting your contact information, you agree to receive communications from our team about products, services, and events. You may unsubscribe from these updates at any time. Please see our &#x20;
-            a(href="#") Privacy Policy &#x20;
-            |for more information.
+      include ../components/form-subscribe
     .separate-line
     .footer__wrap
       include ../components/logo
