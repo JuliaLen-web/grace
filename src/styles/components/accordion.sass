@@ -26,7 +26,7 @@
       height: 46px
       flex-shrink: 0
       +screen($mobile)
-        margin-block-start: -5px
+        margin-block-start: -2px
         width: 34px
         height: 34px
 
@@ -66,14 +66,16 @@
           +font(22px, 40px)
           color: $neutral-light
           +screen($mobile)
-            +font(18px, 24px)
+            +font(16px, 22px)
 
       p
         +font(20px, 26px)
         color: $neutral-light
-        margin: 20px 0 0
+        box-sizing: border-box
+        padding-block-start: 20px
+        margin: 0
         +screen($mobile)
-          +font(18px, 24px)
+          +font(16px, 22px)
 
   &.active .accordion
     &__head-btn::after
