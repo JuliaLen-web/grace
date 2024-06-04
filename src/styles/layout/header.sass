@@ -9,7 +9,7 @@
   left: 0
   right: 0
   box-sizing: border-box
-  padding-block: 14px
+  padding-block: 15px
   transition: top .6s ease-in-out
 
   &.out
@@ -37,7 +37,7 @@
         &-title
           position: relative
           z-index: 2
-          +font(20px, 26px)
+          +font(18px, 24px)
           box-sizing: border-box
           padding-block: 9px
           padding-inline: 20px 40px
@@ -101,5 +101,8 @@
       +screen($tablet)
         display: none
 
-      &__icon:not(:last-child)
-        margin-inline-end: 30px
+      &__icon
+        height: 20px
+
+        &:not(:last-child)
+          margin-inline-end: 30px

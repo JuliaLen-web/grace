@@ -1,0 +1,32 @@
+.animation-bounce
+  animation-duration: 3s
+  animation-iteration-count: infinite
+  animation-name: animation-bounce
+  animation-timing-function: linear
+
+@keyframes animation-bounce
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-15px)
+  100%
+    transform: translateY(0)
+
+.animation-smoke
+  &:after
+    animation-duration: 3.4s
+    animation-iteration-count: infinite
+    animation-name: animation-smoke
+    animation-timing-function: linear
+    transition: opacity .3s transform .3s
+
+@keyframes animation-smoke
+  0%
+    opacity: 0.4
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+    opacity: 0.6
+  100%
+    transform: scale(1)
+    opacity: 0.4
