@@ -1,3 +1,5 @@
+@use 'variables' as *
+
 .animation-bounce
   animation-duration: 3s
   animation-iteration-count: infinite
@@ -18,15 +20,18 @@
     animation-iteration-count: infinite
     animation-name: animation-smoke
     animation-timing-function: linear
-    transition: opacity .3s transform .3s
+    transition: opacity .3s, transform .3s, background .3s
 
 @keyframes animation-smoke
   0%
     opacity: 0.4
+    background: $graph-dark
     transform: scale(1)
   50%
     transform: scale(1.1)
+    background: $neutral
     opacity: 0.6
   100%
     transform: scale(1)
+    background: $graph-dark
     opacity: 0.4
