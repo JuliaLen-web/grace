@@ -21,22 +21,27 @@
       height: 46px
 
     &::before
-      background: url(../assets/img/svg/top-angles.svg) no-repeat repeat center / 100% 46px
+      background: url(../assets/img/svg/top-angles.svg) no-repeat center / 100% 46px
       top: 0
+      +screen($mobile-sm)
+        background: url(../assets/img/svg/top-angles-mobile.svg) no-repeat top center/100% auto
 
     &::after
-      background: url(../assets/img/svg/bottom-angles.svg) no-repeat repeat center / 100% 46px
+      background: url(../assets/img/svg/bottom-angles.svg) no-repeat center / 100% 46px
       bottom: 0
+      +screen($mobile-sm)
+        background: url(../assets/img/svg/bottom-angles-mobile.svg) no-repeat bottom center/100% auto
 
     &-title
       font-size: clamp(50px, 10vw, 96px)
       line-height: 115%
-      font-family: $font-headers
+      font-family: $font-brand
       text-transform: uppercase
       letter-spacing: 2.1vw
-      font-weight: 900
-      margin-bottom: 50px
+      font-weight: 700
+      margin-block-end: 50px
       +screen($mobile)
+        margin-block-end: 30px
 
     &-title,
     &-subtitle
@@ -46,6 +51,8 @@
       +font(22px, 28px)
       color: $neutral-light
       font-family: $font-titles
+      +screen($mobile)
+        +font(18px, 22px)
 
   .separate-line
     background: $neutral-light
@@ -68,6 +75,7 @@
       border-radius: 8px
       box-sizing: border-box
       padding: 20px
+      border: 1px solid $neutral
 
     &:not(:last-child)
       +screen($tablet)
@@ -100,4 +108,4 @@
     &-text
       +font(16px, 28px)
       +screen($mobile)
-        line-height: 26px
+        +font(14px, 22px)

@@ -2,11 +2,12 @@
 @use '../abstracts/mixins' as *
 
 .tokenomics
-  background: linear-gradient(153.12deg, rgba(18, 18, 18, 0.3) -3.21%, #121212 3.46%, rgba(18, 18, 18, 0.8) 63.08%, #121212 94.32%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
+  background: linear-gradient(153deg, rgba(18, 18, 18, 0.3) -3%, #121212 4%, rgba(18, 18, 18, 0.8) 63%, #121212 94%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
   box-sizing: border-box
   padding-block: 23svh 75px
   +screen($mobile)
     padding-block: 15svh 75px
+    background: linear-gradient(153deg, rgba(18, 18, 18, 0.3) -3%, rgba(18, 18, 18, 0.9) 4%, rgba(18, 18, 18, 0.8) 63%, rgba(18, 18, 18, 0.8) 94%)
 
   &__title
     color: $neutral-light

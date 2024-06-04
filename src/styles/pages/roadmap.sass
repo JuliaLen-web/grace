@@ -2,10 +2,11 @@
 @use '../abstracts/mixins' as *
 
 .roadmap
-  background: linear-gradient(153.12deg, rgba(18, 18, 18, 0.3) -3.21%, #121212 3.46%, rgba(18, 18, 18, 0.8) 63.08%, #121212 94.32%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
+  background: linear-gradient(153.12deg, rgba(18, 18, 18, 0.3) -3%, #121212 4%, rgba(18, 18, 18, 0.8) 63%, #121212 94%), url(../assets/img/svg/grid.svg) repeat 0 0/100% auto
   box-sizing: border-box
   padding-block: 23svh 75px
   +screen($mobile)
+    background: linear-gradient(-3deg, rgba(18, 18, 18, 0.1) 10%, rgba(18, 18, 18, 0.8) 11%, rgba(18, 18, 18, 0.9) 60%, rgba(18, 18, 18, 0.2) 72%, rgba(18, 18, 18, 0.9) 87%, rgba(18, 18, 18, 0.4) 92%)
     padding-block: 15svh 75px
 
   &__title
