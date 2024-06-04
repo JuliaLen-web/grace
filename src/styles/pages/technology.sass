@@ -3,12 +3,14 @@
 
 .technology
   background: $dark
+  +screen($mobile)
+    background: linear-gradient(178deg, rgba(18, 18, 18, 0.8) 10%, rgba(18, 18, 18, 0.8) 72%, rgba(18, 18, 18, 0.9) 93%)
 
   &__blockquote
     background: linear-gradient(-23deg, rgba(18, 18, 18, 0.8) 8%, rgba(18, 18, 18, 0.86) 22%, rgba(18, 18, 18, 0.9) 52%, rgba(18, 18, 18, 0.8) 75%, #121212 98%),  url(../assets/img/svg/grid.svg) repeat 0 0/105% auto, url(../assets/img/global/noisy-texture.png) repeat center/150px
     border-radius: 0 0 60px 60px
     box-sizing: border-box
-    padding: 23svh 100px 75px
+    padding: 23svh 80px 75px
     min-height: 80svh
     +screen($mobile)
       padding: 15svh 0 75px
@@ -75,15 +77,18 @@
           +font(14px, 20px)
 
     &-title
-      +font(60px, 78px)
+      font-size: clamp(42px, 5vw, 60px)
+      line-height: 130%
       font-weight: 700
       color: $neutral-light
-      margin-inline-start: 20px
+      font-family: $font-brand
+      letter-spacing: 2px
       +screen($mobile)
-        font-family: $font-headers
+        width: min-content
         letter-spacing: 4px
         text-align: center
-        +font(32px, 42px)
+        line-height: 110%
+        font-weight: 900
         margin-block-end: 60px
 
   &__features
@@ -94,7 +99,9 @@
 
     &:not(.noisy-bg)
       box-sizing: border-box
-      padding-block-start: 80px
+      padding-block-start: 120px
+      +screen($tablet)
+        padding-block-start: 80px
 
     &.noisy-bg
       padding-block: 60px 80px
@@ -109,10 +116,10 @@
         align-items: flex-start
 
       &-title
-        +font(60px, 78px)
         font-weight: 700
-        font-size: clamp(32px, 5vw, 60px)
+        font-size: clamp(32px, 3.6vw, 56px)
         line-height: 130%
+        font-family: $font-brand
 
         span
           color: $neutral-light
