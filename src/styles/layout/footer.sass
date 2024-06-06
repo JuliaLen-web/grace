@@ -45,10 +45,29 @@
       flex-wrap: wrap
       align-items: center
 
-  .logo
-    +screen($mobile)
-      min-width: 100%
-      margin-block-end: 30px
+    .logo
+      margin-block-end: 35px
+
+    &-column
+      +screen($mobile)
+        min-width: 100%
+        margin-block-end: 35px
+
+      .button
+        position: relative
+        padding-inline: 10px 35px
+        +font(15px, 20px)
+        font-weight: 700
+
+        &:after
+          content: ''
+          position: absolute
+          display: block
+          width: 24px
+          height: 18px
+          top: calc(50% - 12px)
+          right: 7px
+          background: url(../assets/img/svg/binoculars.svg) no-repeat center/contain
 
   .navigation
     &__wrap
